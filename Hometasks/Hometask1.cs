@@ -1,4 +1,5 @@
 ﻿using System;
+namespace Hometasks;
 
 internal class HomeTask1
 {
