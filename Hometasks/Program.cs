@@ -1,4 +1,9 @@
-﻿string name = Console.ReadLine();
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Hello," + name);
+﻿using System;
 
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        HomeTask1.Task1();
+    }
+}
