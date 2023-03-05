@@ -67,4 +67,30 @@ Welcome to the TMS lesons.
         Console.WriteLine("Second part: " + secondpart);
 
     }
+
+    /*
+Дана строка: Плохой день.
+Необходимо с помощью метода substring удалить слово "плохой". После чего необходимо используя команду insert создать строку со значением: Хороший день!!!!!!!!!.
+Заменить последний "!" на "?"
+     */
+
+    public static void Task4()
+    {
+        string sentence = "Плохой день.";
+        Console.WriteLine(sentence);
+
+        string bad = "плохой";
+        sentence = sentence.Substring(bad.Length);
+        Console.WriteLine(sentence);
+
+        sentence = sentence.Insert(0,"Хороший");
+        sentence = sentence.Insert(sentence.Length-1, "!!!!!!!!!");
+        Console.WriteLine(sentence);
+
+        int index = sentence.LastIndexOf("!");
+        sentence = sentence.Remove(index,1);
+        sentence = sentence.Insert(index, "?");
+        Console.WriteLine(sentence);
+        
+    }
 }
