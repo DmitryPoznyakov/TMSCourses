@@ -17,6 +17,7 @@ internal class Program
         //HomeTask3.Task4();
         //HomeTask3.Task5();
         //HomeTask3.Task6();
-        HomeTask4.Task1();
+        //HomeTask4.Task1();
+        HomeTask4.Task2();
     }
 }
