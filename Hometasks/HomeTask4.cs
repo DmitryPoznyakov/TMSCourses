@@ -8,22 +8,22 @@ internal class HomeTask4
 	 */
 
     public static void Task1()
-	{
-		Console.Write("Write the sentence, that contain word \"test\" and numbers: ");
-		string textstart;
-		textstart = Console.ReadLine();
-		textstart = textstart.Replace("test", "testing");
+    {
+        Console.Write("Write the sentence, that contain word \"test\" and numbers: ");
+        string textstart;
+        textstart = Console.ReadLine();
+        textstart = textstart.Replace("test", "testing");
 
         Console.Write("The result is: ");
         for (int i = 0; i < textstart.Length; i++)
-			if (char.IsDigit(textstart[i]))
+            if (char.IsDigit(textstart[i]))
 
-			{
-				Console.Write("");
-			}
-		else
-			Console.Write(textstart[i]);
-	}
+            {
+                Console.Write("");
+            }
+            else
+                Console.Write(textstart[i]);
+    }
 
     /*
 Используя метод вывода значения в консоль, выполните конкатенацию слов и выведите на экран следующую фразу:
@@ -32,15 +32,15 @@ Welcome to the TMS lesons.
     */
 
     public static void Task2()
-	{
+    {
         string welcome = "\"Welcome\"";
         string to = "\"to\"";
         string the = "\"the\"";
         string tms = "\"TMS\"";
         string lessons = "\"lesons.\"";
 
-        string[] array = new string[] { welcome, to, the, tms, lessons};
-		string sentense = string.Join(" ", array);
+        string[] array = new string[] { welcome, to, the, tms, lessons };
+        string sentense = string.Join(" ", array);
         sentense = sentense.Replace("\"", "");
 
         Console.WriteLine(sentense);
@@ -52,6 +52,19 @@ Welcome to the TMS lesons.
 Результат вывести в консоль.
      */
 
-    public static void Task2()
+    public static void Task3()
     {
+        string sentence = "teamwithsomeofexcersicesabcwanttomakeitbetter.";
+        Console.WriteLine(sentence);
+
+        string abc = "abc";
+        int index = sentence.IndexOf(abc);
+
+        string firstpart = sentence.Remove(index,(sentence.Length-index));
+        string secondpart = sentence.Remove(0,index+abc.Length);
+
+        Console.WriteLine("First part: " + firstpart);
+        Console.WriteLine("Second part: " + secondpart);
+
     }
+}
