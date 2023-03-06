@@ -15,14 +15,14 @@ internal class HomeTask4
         textstart = textstart.Replace("test", "testing");
 
         Console.Write("The result is: ");
+        string textend = "";
         for (int i = 0; i < textstart.Length; i++)
-            if (char.IsDigit(textstart[i]))
-
-            {
-                Console.Write("");
-            }
-            else
-                Console.Write(textstart[i]);
+                if (!Char.IsDigit(textstart, i))
+                {
+                    textend += textstart[i];
+                }
+                Console.WriteLine(textend);
+        Console.WriteLine();
     }
 
     /*
@@ -44,6 +44,7 @@ Welcome to the TMS lesons.
         sentense = sentense.Replace("\"", "");
 
         Console.WriteLine(sentense);
+        Console.WriteLine();
     }
 
     /*
@@ -65,6 +66,7 @@ Welcome to the TMS lesons.
 
         Console.WriteLine("First part: " + firstpart);
         Console.WriteLine("Second part: " + secondpart);
+        Console.WriteLine();
 
     }
 
@@ -91,6 +93,7 @@ Welcome to the TMS lesons.
         sentence = sentence.Remove(index,1);
         sentence = sentence.Insert(index, "?");
         Console.WriteLine(sentence);
-        
+        Console.WriteLine();
+
     }
 }
